@@ -1,0 +1,89 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section data-role="page" id="home" data-rockncoder-jspage="home" data-transition="">
+    <div data-role="panel" id="homePanel" data-theme="a">
+        <ul data-role="listview" data-inset="true">
+    		<li><a href="#home">Home</a></li>
+			<li><a href="#contacts">Contacts</a></li>
+			<li><a href="#addcontact" >Add Contact</a></li>
+        </ul>
+    </div>
+	<header data-role="header" data-position="fixed">
+      <a href="#homePanel" class="" data-icon="bars" data-iconpos="notext"></a>
+		<h1>Home</h1>
+	</header>
+	<div data-role="content" align="center">
+		<h2>JQM Contacts</h2>
+        <p>a jQuery Mobile, Backbone.js, & ASP.NET MVC</p>
+        <p>Demo Program</p>
+        <p>by the <a href="http://therockncoder.blogspot.com/">Rockncoder</a></p>
+	</div>
+</section>
+
+<section data-role="page" id="contacts"  data-rockncoder-jspage="contacts">
+    <div data-role="panel" id="listPanel" data-theme="a">
+        <ul data-role="listview" data-inset="true">
+    		<li><a href="#home">Home</a></li>
+			<li><a href="#contacts">Contacts</a></li>
+			<li><a href="#addcontact" >Add Contact</a></li>
+        </ul>
+    </div>
+	<header data-role="header" data-position="fixed">
+      <a href="#listPanel" class="" data-icon="bars" data-iconpos="notext"></a>
+		<h1>Contacts</h1>
+	</header>
+	<div data-role="content">
+		<ul id="contactlistview" data-role="listview">
+		</ul>
+	</div>
+</section>
+
+<section data-role="page" id="addcontact"  data-rockncoder-jspage="addcontact" >
+    <div data-role="panel" id="addPanel" data-theme="a">
+        <ul data-role="listview" data-inset="true">
+    		<li><a href="#home">Home</a></li>
+			<li><a href="#contacts">Contacts</a></li>
+			<li><a href="#addcontact" >Add Contact</a></li>
+        </ul>
+    </div>
+	<header data-role="header" data-position="fixed">
+      <a href="#addPanel" class="" data-icon="bars" data-iconpos="notext"></a>
+		<h1>Add Contact</h1>
+	</header>
+	<div data-role="content">
+		<div data-role="fieldcontain">
+			<input type="text" id="firstNameAddContact" name="firstNameAddContact" class="inputdata" tabindex="1" placeholder="First Name"/>
+			<input type="text" id="lastNameAddContact" name="lastNameAddContact" class="inputdata" tabindex="2"  placeholder="Last Name"/>
+			<input type="tel" id="telephoneAddContact" name="phoneAddContact" class="inputdata" tabindex="3"  placeholder="Telephone"/>
+			<input type="email" id="emailAddContact" name="emailAddContact" class="inputdata" tabindex="4"  placeholder="E-mail"/>
+		</div>
+		<div data-role="controlgroup" data-type="horizontal" align = "center">
+			<button id="cancelAddContact" data-inline="true">Cancel</button>
+			<button id="saveAddContact" data-inline="true" data-theme="b">Save</button>
+		</div>
+	</div>
+</section>
+
+<section data-role="page" id="editcontact" data-rockncoder-jspage="editcontact">
+    <div data-role="panel" id="editPanel" data-theme="a">
+        <ul data-role="listview" data-inset="true">
+    		<li><a href="#home">Home</a></li>
+			<li><a href="#contacts">Contacts</a></li>
+			<li><a href="#addcontact" >Add Contact</a></li>
+        </ul>
+    </div>
+	<header data-role="header" data-position="fixed">
+        <a href="#editPanel" class="" data-icon="bars" data-iconpos="notext"></a>
+		<h1>Edit Contact</h1>
+		<div data-role="controlgroup" data-type="horizontal" align = "center">
+			<button id="cancelEditContact" data-inline="true">cancel</button>
+			<button id="updateEditContact" data-inline="true" data-theme="b">update</button>
+			<button id="deleteEditContact" data-inline="true" data-theme="e">del</button>
+		</div>
+	</header>
+	<div data-role="content">
+		<div id="edits"></div>
+	</div>
+</section>
